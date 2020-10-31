@@ -44,15 +44,3 @@ struct MealData:Codable {
     let strSource:String?
     let dateModified:String?
 }
-
-extension MealData {
-    static var searchMeal:Resource<Meal> = {
-        guard let url = URL(string: API.searchMealURL) else { fatalError("URL is incorrect!") }
-        return Resource<Meal>(url: url)
-    }()
-    
-    static var lookupMeal:Resource<Meal> = {
-        guard let url = URL(string: API.lookupMealURL) else { fatalError("URL is incorrect!") }
-        return Resource<Meal>(url: url)
-    }()
-}

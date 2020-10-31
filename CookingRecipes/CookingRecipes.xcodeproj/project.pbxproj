@@ -23,6 +23,7 @@
 		1F6B124B254DF94600EA523F /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6B124A254DF94600EA523F /* WebService.swift */; };
 		1F6B1254254DFA5E00EA523F /* MealListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6B1253254DFA5E00EA523F /* MealListVM.swift */; };
 		1F6B1259254E054E00EA523F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6B1258254E054E00EA523F /* Extensions.swift */; };
+		1F6B125F254E0B1400EA523F /* MealDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6B125E254E0B1400EA523F /* MealDetailVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		1F6B124A254DF94600EA523F /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		1F6B1253254DFA5E00EA523F /* MealListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListVM.swift; sourceTree = "<group>"; };
 		1F6B1258254E054E00EA523F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		1F6B125E254E0B1400EA523F /* MealDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				1F6B1253254DFA5E00EA523F /* MealListVM.swift */,
+				1F6B125E254E0B1400EA523F /* MealDetailVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 			files = (
 				1F6B124B254DF94600EA523F /* WebService.swift in Sources */,
 				1F6B11DB254DE3E000EA523F /* AppDelegate.swift in Sources */,
+				1F6B125F254E0B1400EA523F /* MealDetailVM.swift in Sources */,
 				1F6B121F254DE5DE00EA523F /* RecipesListTVC.swift in Sources */,
 				1F6B1235254DF77E00EA523F /* Meal.swift in Sources */,
 				1F6B1230254DF42F00EA523F /* IngredientCell.swift in Sources */,
