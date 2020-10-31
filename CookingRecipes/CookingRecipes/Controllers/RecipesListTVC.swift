@@ -9,6 +9,8 @@ import UIKit
 
 class RecipesListTVC: UITableViewController {
 
+    @IBOutlet weak var SearchBar: UISearchBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

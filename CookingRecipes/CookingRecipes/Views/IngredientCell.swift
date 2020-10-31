@@ -1,5 +1,5 @@
 //
-//  RecipeCell.swift
+//  IngredientCell.swift
 //  CookingRecipes
 //
 //  Created by Hiram Castro on 10/31/20.
@@ -7,11 +7,9 @@
 
 import UIKit
 
-class RecipeCell: UITableViewCell {
+class IngredientCell: UITableViewCell {
     
-    @IBOutlet weak var MealThumb: UIImageView!
-    @IBOutlet weak var MealName: UILabel!
-    @IBOutlet weak var MealCategory: UILabel!
+    @IBOutlet weak var Ingredient: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
