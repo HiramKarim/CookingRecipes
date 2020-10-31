@@ -13,6 +13,14 @@ class RecipeCell: UITableViewCell {
     @IBOutlet weak var MealName: UILabel!
     @IBOutlet weak var MealCategory: UILabel!
     
+    var mealVM:MealVM? {
+        didSet {
+            MealName.text = mealVM?.strMeal ?? ""
+            MealCategory.text = mealVM?.strCategory ?? ""
+            MealThumb.url(mealVM?.strMealThumb)
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct Meal:Decodable {
+struct Meal:Codable {
     let meals:[MealData]?
 }
 
-struct MealData:Decodable {
+struct MealData:Codable {
     let idMeal:String?
     let strMeal:String?
     let strDrinkAlternate:String?
@@ -45,4 +45,14 @@ struct MealData:Decodable {
     let dateModified:String?
 }
 
-
+extension MealData {
+    static var searchMeal:Resource<Meal> = {
+        guard let url = URL(string: API.searchMealURL) else { fatalError("URL is incorrect!") }
+        return Resource<Meal>(url: url)
+    }()
+    
+    static var lookupMeal:Resource<Meal> = {
+        guard let url = URL(string: API.lookupMealURL) else { fatalError("URL is incorrect!") }
+        return Resource<Meal>(url: url)
+    }()
+}

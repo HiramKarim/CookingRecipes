@@ -35,14 +35,14 @@
                                                 <constraint firstAttribute="width" constant="100" id="REz-fZ-wTW"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHy-Ip-llO" userLabel="MealName">
-                                            <rect key="frame" x="142" y="11" width="252" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHy-Ip-llO" userLabel="MealName">
+                                            <rect key="frame" x="142" y="11" width="252" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUg-E0-jAY" userLabel="MealCategory">
-                                            <rect key="frame" x="142" y="46" width="252" height="21"/>
+                                            <rect key="frame" x="142" y="45.5" width="252" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -75,7 +75,7 @@
                     <navigationItem key="navigationItem" title="Cooking Recipes" id="ulq-aT-9oP"/>
                     <connections>
                         <outlet property="SearchBar" destination="3Xl-BT-97P" id="9Il-4k-hTZ"/>
-                        <segue destination="IO9-xF-aeg" kind="show" id="zgP-om-RpH"/>
+                        <segue destination="IO9-xF-aeg" kind="show" identifier="MealDetail" id="zgP-om-RpH"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W7j-os-jgX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
