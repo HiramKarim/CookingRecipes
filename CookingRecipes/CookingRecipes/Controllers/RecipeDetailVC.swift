@@ -19,7 +19,7 @@ class RecipeDetailVC: UIViewController {
     
     var mealID:String?
     
-    private var mealDetailVM = MealDetailVM()
+    private var mealDetailVM = MealListVM()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,11 +48,8 @@ class RecipeDetailVC: UIViewController {
         self.MealName.text = mealVM.strMeal ?? ""
         self.MealInstrucions.text = mealVM.strInstructions ?? ""
         
-        guard let stringURL = mealVM.strYoutube, let url = URL(string: stringURL) else {
-            return
-        }
-        
-        webView.load(URLRequest(url: url))
+        guard let stringURL = mealVM.strYoutube, let url = URL(string: stringURL)
+        else { return }
     }
     
     private func showAlert() {
