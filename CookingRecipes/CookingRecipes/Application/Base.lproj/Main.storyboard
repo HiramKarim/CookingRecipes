@@ -90,9 +90,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w0X-bq-zv9">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w0X-bq-zv9" customClass="YTPlayerView">
                                 <rect key="frame" x="0.0" y="88" width="414" height="200"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="K17-Qn-mm9"/>
                                 </constraints>
@@ -171,7 +171,7 @@
                     <connections>
                         <outlet property="MealInstrucions" destination="jE0-4v-5bX" id="KKD-iW-jiT"/>
                         <outlet property="MealName" destination="B1I-01-ZzW" id="Pt6-iO-Hbl"/>
-                        <outlet property="videoView" destination="w0X-bq-zv9" id="pdt-fC-KHN"/>
+                        <outlet property="videoView" destination="w0X-bq-zv9" id="loH-hd-M44"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j71-Cx-CYv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -1,0 +1,16 @@
+PODS:
+  - youtube-ios-player-helper (1.0.2)
+
+DEPENDENCIES:
+  - youtube-ios-player-helper
+
+SPEC REPOS:
+  trunk:
+    - youtube-ios-player-helper
+
+SPEC CHECKSUMS:
+  youtube-ios-player-helper: 40b96e52c22445f0fdc43731cefa32c67075ff81
+
+PODFILE CHECKSUM: 6a4a4c425b775af615b715caf5bf265685a8606b
+
+COCOAPODS: 1.9.3

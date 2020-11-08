@@ -6,12 +6,11 @@
 //
 
 import UIKit
-import AVFoundation
-import WebKit
+import youtube_ios_player_helper
 
 class RecipeDetailVC: UIViewController {
     
-    @IBOutlet weak var videoView: UIView!
+    @IBOutlet weak var videoView: YTPlayerView!
     @IBOutlet weak var MealName: UILabel!
     @IBOutlet weak var MealInstrucions: UILabel!
     @IBOutlet weak var IngredientsTableView: UITableView!
@@ -48,8 +47,18 @@ class RecipeDetailVC: UIViewController {
         self.MealName.text = mealVM.strMeal ?? ""
         self.MealInstrucions.text = mealVM.strInstructions ?? ""
         
-        guard let stringURL = mealVM.strYoutube, let url = URL(string: stringURL)
+        guard let stringURL = mealVM.strYoutube
         else { return }
+        
+        let videoElements = stringURL.split(separator: "=")
+        let videoID = videoElements.count > 1 ? videoElements[1] : ""
+        
+        if !videoID.isEmpty {
+            videoView.delegate = self
+            videoView.load(withVideoId: String(videoID),
+                           playerVars: ["playsinline":1])
+        }
+        
     }
     
     private func showAlert() {
@@ -58,4 +67,10 @@ class RecipeDetailVC: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
 
+}
+
+extension RecipeDetailVC:YTPlayerViewDelegate {
+    func playerViewDidBecomeReady(_ playerView: YTPlayerView) {
+        playerView.playVideo()
+    }
 }
