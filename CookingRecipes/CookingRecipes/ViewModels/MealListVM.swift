@@ -10,6 +10,8 @@ import Foundation
 class MealListVM {
     var mealVM:[MealVM]
     var errorMessage = ""
+    var ingredients = [String]()
+    var tableHeight = 0
     
     init() {
         mealVM = [MealVM]()
@@ -60,10 +62,99 @@ extension MealListVM {
                 break
             case .success(let meal):
                 self.mealVM = meal.meals?.map(MealVM.init) ?? []
+                self.getMealIngredients()
                 completion(true)
                 break
             }
         })
+    }
+    
+    private func getMealIngredients() {
+        
+        let currentMeal = getMealVM(at: 0)
+        
+        if let ingredient = currentMeal?.strIngredient1, !ingredient.isEmpty {
+            ingredients.append(ingredient)
+        }
+        
+        if let ingredient = currentMeal?.strIngredient2, !ingredient.isEmpty {
+            ingredients.append(ingredient)
+        }
+        
+        if let ingredient = currentMeal?.strIngredient3, !ingredient.isEmpty {
+            ingredients.append(ingredient)
+        }
+        
+        if let ingredient = currentMeal?.strIngredient4, !ingredient.isEmpty {
+            ingredients.append(ingredient)
+        }
+        
+        if let ingredient = currentMeal?.strIngredient5, !ingredient.isEmpty {
+            ingredients.append(ingredient)
+        }
+        
+        if let ingredient = currentMeal?.strIngredient6, !ingredient.isEmpty {
+            ingredients.append(ingredient)
+        }
+        
+        if let ingredient = currentMeal?.strIngredient7, !ingredient.isEmpty {
+            ingredients.append(ingredient)
+        }
+        
+        if let ingredient = currentMeal?.strIngredient8, !ingredient.isEmpty {
+            ingredients.append(ingredient)
+        }
+        
+        if let ingredient = currentMeal?.strIngredient9, !ingredient.isEmpty {
+            ingredients.append(ingredient)
+        }
+        
+        if let ingredient = currentMeal?.strIngredient10, !ingredient.isEmpty {
+            ingredients.append(ingredient)
+        }
+        
+        if let ingredient = currentMeal?.strIngredient11, !ingredient.isEmpty {
+            ingredients.append(ingredient)
+        }
+        
+        if let ingredient = currentMeal?.strIngredient12, !ingredient.isEmpty {
+            ingredients.append(ingredient)
+        }
+        
+        if let ingredient = currentMeal?.strIngredient13, !ingredient.isEmpty {
+            ingredients.append(ingredient)
+        }
+        
+        if let ingredient = currentMeal?.strIngredient14, !ingredient.isEmpty {
+            ingredients.append(ingredient)
+        }
+        
+        if let ingredient = currentMeal?.strIngredient15, !ingredient.isEmpty {
+            ingredients.append(ingredient)
+        }
+        
+        if let ingredient = currentMeal?.strIngredient16, !ingredient.isEmpty {
+            ingredients.append(ingredient)
+        }
+        
+        if let ingredient = currentMeal?.strIngredient17, !ingredient.isEmpty {
+            ingredients.append(ingredient)
+        }
+        
+        if let ingredient = currentMeal?.strIngredient18, !ingredient.isEmpty {
+            ingredients.append(ingredient)
+        }
+        
+        if let ingredient = currentMeal?.strIngredient19, !ingredient.isEmpty {
+            ingredients.append(ingredient)
+        }
+        
+        if let ingredient = currentMeal?.strIngredient20, !ingredient.isEmpty {
+            ingredients.append(ingredient)
+        }
+        
+        tableHeight = ingredients.count * Int(43.5)
+        
     }
     
 }

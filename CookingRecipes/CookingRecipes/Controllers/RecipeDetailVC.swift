@@ -14,7 +14,7 @@ class RecipeDetailVC: UIViewController {
     @IBOutlet weak var MealName: UILabel!
     @IBOutlet weak var MealInstrucions: UILabel!
     @IBOutlet weak var IngredientsTableView: UITableView!
-    @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var IngredientsTableHeightConstraint: NSLayoutConstraint! // 100
     
     var mealID:String?
     
@@ -59,6 +59,13 @@ class RecipeDetailVC: UIViewController {
                            playerVars: ["playsinline":1])
         }
         
+        IngredientsTableView.dataSource = self
+        
+        DispatchQueue.main.async {
+            self.IngredientsTableHeightConstraint.constant = CGFloat(self.mealDetailVM.tableHeight)
+            self.IngredientsTableView.reloadData()
+        }
+        
     }
     
     private func showAlert() {
@@ -73,4 +80,21 @@ extension RecipeDetailVC:YTPlayerViewDelegate {
     func playerViewDidBecomeReady(_ playerView: YTPlayerView) {
         playerView.playVideo()
     }
+}
+
+extension RecipeDetailVC:UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return mealDetailVM.ingredients.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let ingredientCell = tableView.dequeueReusableCell(withIdentifier: "IngredientCell") as? IngredientCell
+        else { return UITableViewCell() }
+        
+        ingredientCell.Ingredient.text = mealDetailVM.ingredients[indexPath.row]
+        
+        return ingredientCell
+    }
+    
 }
