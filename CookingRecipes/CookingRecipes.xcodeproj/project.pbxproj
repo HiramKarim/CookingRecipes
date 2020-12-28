@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -133,12 +133,11 @@
 			isa = PBXGroup;
 			children = (
 				1F6B124F254DF9D700EA523F /* Application */,
-				1F6B1239254DF8F500EA523F /* API */,
+				1F6EFCD925761C8900925D02 /* Domain */,
+				1F6EFCDA25761C9400925D02 /* Presentation */,
+				1F6EFCDC25761CA800925D02 /* Data */,
+				1F6EFCDD25761CC000925D02 /* Infrastructure */,
 				1F6B1212254DE47800EA523F /* Helper */,
-				1F6B1211254DE47200EA523F /* Models */,
-				1F6B1210254DE46900EA523F /* ViewModels */,
-				1F6B120E254DE45800EA523F /* Views */,
-				1F6B120D254DE44E00EA523F /* Controllers */,
 				1F6B11E8254DE3E300EA523F /* Info.plist */,
 			);
 			path = CookingRecipes;
@@ -162,55 +161,12 @@
 			path = CookingRecipesUITests;
 			sourceTree = "<group>";
 		};
-		1F6B120D254DE44E00EA523F /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				1F6B121E254DE5DE00EA523F /* RecipesListTVC.swift */,
-				1F6B1228254DEB1100EA523F /* RecipeDetailVC.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		1F6B120E254DE45800EA523F /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				1F6B1223254DE6D600EA523F /* RecipeCell.swift */,
-				1F6B122F254DF42E00EA523F /* IngredientCell.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		1F6B1210254DE46900EA523F /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				1F6B1253254DFA5E00EA523F /* MealListVM.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		1F6B1211254DE47200EA523F /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				1F6B1234254DF77E00EA523F /* Meal.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		1F6B1212254DE47800EA523F /* Helper */ = {
 			isa = PBXGroup;
 			children = (
 				1F6B1258254E054E00EA523F /* Extensions.swift */,
 			);
 			path = Helper;
-			sourceTree = "<group>";
-		};
-		1F6B1239254DF8F500EA523F /* API */ = {
-			isa = PBXGroup;
-			children = (
-				1F6B123A254DF90200EA523F /* API.swift */,
-				1F6B124A254DF94600EA523F /* WebService.swift */,
-			);
-			path = API;
 			sourceTree = "<group>";
 		};
 		1F6B124F254DF9D700EA523F /* Application */ = {
@@ -225,6 +181,114 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
+		1F6EFCD925761C8900925D02 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				1F6EFCE12576223A00925D02 /* UseCases */,
+				1F6EFCE025761E9500925D02 /* Entities */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		1F6EFCDA25761C9400925D02 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				1F6EFCE32576228C00925D02 /* RecipeDetail */,
+				1F6EFCE22576226A00925D02 /* RecipeList */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		1F6EFCDC25761CA800925D02 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		1F6EFCDD25761CC000925D02 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				1F6EFCDE25761D0500925D02 /* Network */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		1F6EFCDE25761D0500925D02 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1F6B123A254DF90200EA523F /* API.swift */,
+				1F6B124A254DF94600EA523F /* WebService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		1F6EFCE025761E9500925D02 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				1F6B1234254DF77E00EA523F /* Meal.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		1F6EFCE12576223A00925D02 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		1F6EFCE22576226A00925D02 /* RecipeList */ = {
+			isa = PBXGroup;
+			children = (
+				1F6EFCE5257622D100925D02 /* View */,
+				1F6EFCE4257622C500925D02 /* ViewModel */,
+			);
+			path = RecipeList;
+			sourceTree = "<group>";
+		};
+		1F6EFCE32576228C00925D02 /* RecipeDetail */ = {
+			isa = PBXGroup;
+			children = (
+				1F6EFCE72576248700925D02 /* ViewModel */,
+				1F6EFCE62576246F00925D02 /* View */,
+			);
+			path = RecipeDetail;
+			sourceTree = "<group>";
+		};
+		1F6EFCE4257622C500925D02 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1F6B1253254DFA5E00EA523F /* MealListVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1F6EFCE5257622D100925D02 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1F6B121E254DE5DE00EA523F /* RecipesListTVC.swift */,
+				1F6B1223254DE6D600EA523F /* RecipeCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1F6EFCE62576246F00925D02 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1F6B122F254DF42E00EA523F /* IngredientCell.swift */,
+				1F6B1228254DEB1100EA523F /* RecipeDetailVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1F6EFCE72576248700925D02 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		B38145253D023DA68D1F7C5A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,7 +299,6 @@
 				2884A0501AF469972797630C /* Pods-CookingRecipesTests.debug.xcconfig */,
 				0C24BB7FD8C7994E75FF5750 /* Pods-CookingRecipesTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
